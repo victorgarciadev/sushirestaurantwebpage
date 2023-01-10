@@ -1,0 +1,19 @@
+<div *ngIf="sushi">
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div>
+      <img src="{{sushi.img}}" />
+    </div>
+    <div clas="texto">
+      <h1>{{sushi.name}}</h1>
+      <p>{{sushi.description}}</p>
+
+    </div>
+  </div>
+</div>
+<div class="rowButton">
+  <!-- <button type="button" (click)="goBack()">back</button> -->
+  <button class="button-54" role="button" (click)="goBack()">&lt; Atrás</button>
+</div>

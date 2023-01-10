@@ -1,0 +1,24 @@
+<!-- <div class="sushi-menu">
+    <a *ngFor="let sushi of sushi" routerLink="/detail/{{sushi.id}}">
+        {{sushi.name}}
+    </a>
+</div> -->
+
+<div class="divTitle"><h1 class="headTitle">献立 Menu</h1></div>
+    
+    <div class="row">
+        <div class="flip flip-vertical" *ngFor="let sushi of sushi">
+            <div class="front" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.4)), url({{sushi.img}})">
+                <h1 class="text-shadow">{{sushi.name}}</h1>
+            </div>
+            <a class="back" href="/detail/{{sushi.id}}">
+                <h2>{{sushi.name}}</h2>
+                <p>{{sushi.description}}</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">寿司_Project &#9679; Healthy food made with &#x2764; in Barcelona, Spain &#9679; 2022</div>
+
+<!-- <app-sushi-search></app-sushi-search> -->

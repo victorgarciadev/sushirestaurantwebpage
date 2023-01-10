@@ -1,0 +1,20 @@
+<h2>My Sushi</h2>
+<div>
+    <label for="new-sushi">Sushi name: </label>
+    <input id="new-sushi" #sushiName />
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="add(sushiName.value); sushiName.value=''">
+      Add sushi
+    </button>
+  </div>
+
+  <ul class="sushi">
+    <li *ngFor="let sushi of sushi">
+      <a routerLink="/detail/{{sushi.id}}">
+        <span class="badge">{{sushi.id}}</span> {{sushi.name}}
+      </a>
+      <button type="button" class="delete" title="delete sushi"
+        (click)="delete(sushi)">x</button>
+    </li>
+  </ul>
